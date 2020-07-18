@@ -6,11 +6,11 @@ namespace gpacalc
 {
     class Calculator
     {
-        private int _totalCreditUnit;
-        private int _gradePoint;
+        private decimal _totalCreditUnit;
+        private decimal _gradePoint;
         private int _creditUnit;
         private int _score;
-        private int _total;
+        private decimal _total;
         private int _counter = 0;
 
 
@@ -21,7 +21,7 @@ namespace gpacalc
             do
             {
                 Console.Write("Enter score for course #{0} (press 0 to exit): ", _counter += 1);
-                _score = int.Parse(Console.ReadLine());
+                this._score = int.Parse(Console.ReadLine());
 
                 if (_score == 0)
                 {
@@ -44,7 +44,7 @@ namespace gpacalc
             Console.WriteLine("Your GPA this semester is: {0}", GPA.ToString("F"));
         }
 
-        public int ConvertScoreToGradePoint(int Score)
+        public decimal ConvertScoreToGradePoint(int Score)
         {
             if (Score >= 70 && Score <= 100)
             {
